@@ -183,5 +183,26 @@ HSL	  `hsl(H,S,L)`   `hsl(212, 92%, 45%)`<br>
 
 ---
 # 重點提示框
-
+- 語法:
+  1. 注意   -> `[!NOTE]
+  2. 小技巧 -> `[!TIP]
+  3. 很重要 -> '[!IMPORTANT]'
+  4. 警告   -> `[!WARNING]`
+  5. 小心   -> `[!CAUTION]`
+     
+- 範例:
+  > [!NOTE]
+  > Useful information that users should know, even when skimming content.
+  
+  > [!TIP]
+  > Helpful advice for doing things better or more easily.
+  
+  > [!IMPORTANT]
+  > Key information users need to know to achieve their goal.
+  
+  > [!WARNING]
+  > Urgent info that needs immediate user attention to avoid problems.
+  
+  > [!CAUTION]
+  > Advises about risks or negative outcomes of certain actions.
 
