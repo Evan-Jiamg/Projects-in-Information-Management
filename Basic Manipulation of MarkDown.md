@@ -122,7 +122,15 @@ HSL	  `hsl(H,S,L)`   `hsl(212, 92%, 45%)`<br>
 - A
   - B
     - C
-      - D
+## 任務清單
+若要建立工作清單，請在清單項目前加入: \
+任務未完成 ->`[ ]`\
+任務完成 -> `[X]`\
+舉例:
+- [x] #739
+- [ ] https://github.com/octo-org/octo-repo/issues/740
+- [ ] Add delight to the experience when all tasks are complete :tada:
+
 
 
 
