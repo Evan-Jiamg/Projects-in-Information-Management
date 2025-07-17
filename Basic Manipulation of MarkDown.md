@@ -213,7 +213,7 @@ HSL	  `hsl(H,S,L)`   `hsl(212, 92%, 45%)`<br>
   > Advises about risks or negative outcomes of certain actions.
 
 ---
-## 14. 忽略 Markdown 格式
+# 14. 忽略 Markdown 格式
 - 語法: `\`
 - 作用: 透過在 Markdown 的 KEYWORD 前面輸入 `\`，可以避免變成 Markdown 格式
 - 範例:\
