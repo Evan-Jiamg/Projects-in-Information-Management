@@ -134,16 +134,21 @@ HSL	  `hsl(H,S,L)`   `hsl(212, 92%, 45%)`<br>
     - C
 ## 任務清單
 - 若要建立工作清單，請在清單項目前加入: \
-  - 未開放勾選\
     任務未完成 ->`[ ]`\
     任務完成 -> `[X]`\
-  - 開放勾選
     
 - 舉例:
   - [x] #739
   - [ ] https://github.com/octo-org/octo-repo/issues/740
   - [ ] Add delight to the experience when all tasks are complete :tada:
-  - [ ] \(Optional) Open a followup issue
+ 
+---
+# 提及相關人員
+- 語法: `@人員名稱`
+- 作用: 會*觸發通知*，並提醒相關人員注意對話。
+- 舉例:\
+  @github/support What do you think about these updates?
+
 
 
 
