@@ -44,6 +44,8 @@ HSL	  `hsl(H,S,L)`   `hsl(212, 92%, 45%)`<br>
 
 ---
 # 超連結 (MarkDown 連結: 必須寫在同一行，跨行會失敗!!!)
+- **快捷鍵**
+  -> **Ctrl + k**
 - **網頁超連結**<br>
   語法: \[顯示文字](連結網址)<br>
   範例: This site was built using [GitHub Page](https://pages.github.com/)<br><br>
@@ -61,19 +63,19 @@ HSL	  `hsl(H,S,L)`   `hsl(212, 92%, 45%)`<br>
   \[顯示文字](# this-heading-is-not-unique-in-the-file-1)<br>
   \[顯示文字](# this-heading-is-not-unique-in-the-file-2)<br><br>
 - **相對連結 Relative Link**<br>
-  語法: \[顯示文字](docs/完整檔案名稱)
-  作用: 用於連結同一個 Repository 中的其他檔案
-  優點: 適用於 GitHub Pages、多人協作
+  語法: \[顯示文字](docs/完整檔案名稱)<br>
+  作用: 用於連結同一個 Repository 中的其他檔案<br>
+  優點: 適用於 GitHub Pages、多人協作<br>
   範例: [ML Spring 2021] (docs/類神經網路訓練不起來怎麼辦 (三).md)<br><br>
-- **自定義定位點**<br>
-  # Section Heading
+- **手動產生定位點**<br>
+  語法: 生成定位點 -> \<a name="自定義名稱"></a><br>
+        呼叫定位點 -> \[顯示文字](#自定義名稱)<br>
+  作用: 跳轉到特定段落，且不想 or 不能使用標題來產生自動錨點<br>
+  範例:<br>
+  <a name="here"><\a>
+  我想要跳至這個段落，但我並不想要使用標題
 
-Some body text of this section.
+  [手動生成的定位點](#here)
 
-<a name="my-custom-anchor-point"></a>
-Some text I want to provide a direct link to, but which doesn't have its own heading.
-
-(… more content…)
-
-[A link to that custom anchor](#my-custom-anchor-point)
-  
+---
+# 換行符號
