@@ -101,16 +101,18 @@ HSL	  `hsl(H,S,L)`   `hsl(212, 92%, 45%)`<br>
 ---
 # 清單
 ## 無序清單
-- 語法:`-` or `*` or `+`\
-- 舉例:\
+語法:`-` or `*` or `+`\
+舉例:\
   - George Washington -> '- George Washington'
   * John Adams -> '* John Adams'
   + Thomas Jefferson -> '+ Thomas Jefferson'
 ## 有序清單
-- 語法: '1.'、`2.`...\
-- 舉例:\
+語法: '1.'、`2.`...\
+舉例:\
   `1. James Madison`\
   `2. James Monroe`\
   `3. John Quincy Adams`\
+## 巢狀清單
+
 
 
