@@ -67,6 +67,16 @@ HSL	  `hsl(H,S,L)`   `hsl(212, 92%, 45%)`<br>
   作用: 用於連結同一個 Repository 中的其他檔案<br>
   優點: 適用於 GitHub Pages、多人協作<br>
   範例: [ML Spring 2021] (docs/類神經網路訓練不起來怎麼辦 (三).md)<br><br>
+
+| 用途                                         | 說明                                                         | 實例                                                                                         |
+| ------------------------------------------ | ---------------------------------------------------------- | ------------------------------------------------------------------------------------------ |
+| `在同一分支的 .md 檔中`                            | 若你在 `main` 分支裡的某個 Markdown 檔內，想連到 `main` 分支中某個檔案（例如圖片）     | `/assets/images/electrocat.png` <br> 👉 表示從目前 `.md` 所在位置開始往下找                              |
+| `在另一個分支的 .md 檔中`                           | 你目前在某個分支（例如 `dev`），想連到 `main` 分支中的圖片檔案                     | `/../main/assets/images/electrocat.png` <br> 👉 `..` 表示跳出當前目錄，再進入 `main` 分支資料夾             |
+| `在 issue、pull request、comment 中使用的連結`      | 這些是討論區域，非 Markdown 頁面，需完整指向 blob 路徑並加上 `?raw=true` 來正確顯示圖片 | `../blob/main/assets/images/electrocat.png?raw=true` <br> 👉 `blob` 表示原始檔案內容，不是編輯器介面       |
+| `在另一個 repository 的 .md 檔中`                 | 假設你從 `userA/projectB` 想連到 `github/docs` 這個儲存庫的圖片           | `/../../../../github/docs/blob/main/assets/images/electrocat.png` <br> 👉 往上跳出幾層，然後進入別的儲存庫 |
+| `在另一個 repository 的 issue 或 pull request 中` | 和上面一樣，但這是在 GitHub 討論區中使用，要加 `?raw=true` 才能正確載入             | `../../../github/docs/blob/main/assets/images/electrocat.png?raw=true`                     |
+
+  
 - **手動產生定位點**<br>
   語法: 生成定位點 -> `<a name="自定義名稱"></a>` <br>
         呼叫定位點 -> `[顯示文字](#自定義名稱)`<br><br>
@@ -123,13 +133,14 @@ HSL	  `hsl(H,S,L)`   `hsl(212, 92%, 45%)`<br>
   - B
     - C
 ## 任務清單
-若要建立工作清單，請在清單項目前加入: \
-任務未完成 ->`[ ]`\
-任務完成 -> `[X]`\
-舉例:
-- [x] #739
-- [ ] https://github.com/octo-org/octo-repo/issues/740
-- [ ] Add delight to the experience when all tasks are complete :tada:
+- 若要建立工作清單，請在清單項目前加入: \
+  任務未完成 ->`[ ]`\
+  任務完成 -> `[X]`\
+- 舉例:
+  - [x] #739
+  - [ ] https://github.com/octo-org/octo-repo/issues/740
+  - [ ] Add delight to the experience when all tasks are complete :tada:
+
 
 
 
