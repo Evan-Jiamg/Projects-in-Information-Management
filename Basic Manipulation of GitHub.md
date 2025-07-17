@@ -46,11 +46,11 @@ HSL	  `hsl(H,S,L)`   `hsl(212, 92%, 45%)`<br>
 # 超連結 (MarkDown 連結: 必須寫在同一行，跨行會失敗!!!)
 - **網頁超連結**<br>
   語法: \[顯示文字](連結網址)<br>
-  範例: This site was built using [GitHub Page](https://pages.github.com/)
+  範例: This site was built using [GitHub Page](https://pages.github.com/)<br>
 - **章節超連結**<br>
   語法: \[顯示文字](#章節標題名稱)<br>
   作用: 將連結指向同個 .md 檔案中的***標題***，點選標題<ins>左邊出現的*小鏈結*圖示<ins/>即可<br>
-  範例: 指向[大標題位置](#大標題)
+  範例: 指向[大標題位置](#大標題)<br>
 - **重複章節標題 vs. 章節超連結**<br>
   範例：<br>
   \## This heading is not unique in the file<br>
@@ -64,7 +64,7 @@ HSL	  `hsl(H,S,L)`   `hsl(212, 92%, 45%)`<br>
   語法: \[顯示文字](docs/完整檔案名稱)
   作用: 用於連結同一個 Repository 中的其他檔案
   優點: 適用於 GitHub Pages、多人協作
-  範例: [ML Spring 2021] (docs/類神經網路訓練不起來怎麼辦 (三).md)
+  範例: [ML Spring 2021] (docs/類神經網路訓練不起來怎麼辦 (三).md)<br>
 - **自定義定位點**<br>
   # Section Heading
 
