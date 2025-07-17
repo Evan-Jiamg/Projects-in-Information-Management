@@ -47,7 +47,7 @@ HSL	  `hsl(H,S,L)`   `hsl(212, 92%, 45%)`<br>
 - **快捷鍵**
   -> **Ctrl + k**
 - **網頁超連結**<br>
-  語法: \*[顯示文字](連結網址)*<br>
+  語法: \[顯示文字](網址)<br>
   範例: This site was built using [GitHub Page](https://pages.github.com/)<br><br>
 - **章節超連結**<br>
   語法: *\[顯示文字](#章節標題名稱)*<br>
