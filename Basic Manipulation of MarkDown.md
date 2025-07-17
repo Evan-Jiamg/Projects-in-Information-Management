@@ -17,11 +17,12 @@
 - 下標字 <sup> <sup/> -> 這是<sup>下標<sup/>字
 
 ---
-# 引用文本 Quotation '>'
+# 引用
+## 引用文本 Quotation '>'
 This is not a quote.
 > This is a quote.
 
-# 引用 Code '`'
+## 引用 Code '`'
 - 使用快捷鍵 -> **Ctrl + e**
 - 文字內引用 Code -> '`'<br>
   Use `git status` to list all new or modified files that haven't yet been committed.
@@ -32,6 +33,12 @@ This is not a quote.
   git add
   git commit
   ```
+
+## 引用 Issues 或 Pull requests
+- 輸入 `#` + `編號`，例如：`#123`，會自動變成指向該 GitHub 的 Isssues 或 Pull requests 超連結。
+- 範例: 修復請參考 #123
+
+
 ---
 # 字體顏色
 
@@ -104,9 +111,16 @@ HSL	  `hsl(H,S,L)`   `hsl(212, 92%, 45%)`<br>
 
 ---
 # 插入圖片
-- 語法 (一般連結): `![圖片名稱](圖片網址)`
+- 語法 (一般連結): `![圖片名稱](圖片網址)`\
 - 語法 (相對連結): `![圖片名稱](docs/完整檔案圖片名稱)`
   [用於連結同一個 Repository 中的其他檔案]<br>
+- 上傳圖片渠道: \
+  可在 Issue、PR、Comment、或 .md 中直接：
+  1. 拖曳檔案
+  2. `Ctrl + V` 貼上圖片
+  3. 手動選擇檔案
+- 範例: \
+  ![Image Alt Text](https://miro.medium.com/v2/resize:fit:1400/1*JLYlSLSK8-AZo8gt9UdYqA.jpeg)
 
 ---
 # 清單
@@ -149,7 +163,11 @@ HSL	  `hsl(H,S,L)`   `hsl(212, 92%, 45%)`<br>
 - 舉例:\
   @github/support What do you think about these updates?
 
-
-
+---
+# 輸入表情符號
+- 語法: `:emoji_code:`
+- 範例:\
+  Looks great! :tada:  ->  +1: Looks great! `:tada:`
+  OMG~~ :😃:
 
 
