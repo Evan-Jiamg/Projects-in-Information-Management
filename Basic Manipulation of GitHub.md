@@ -5,6 +5,7 @@
 ### 小標題
 -> ###
 
+---
 # 文本樣式
 - 粗體 **/__ -> **粗體字** or __粗體字__
 - 斜體 */_ -> *斜體字* or _斜體字_
@@ -15,25 +16,23 @@
 - 上標字 <sub> <sub/> -> 這是<sub>上標<sub/>字
 - 下標字 <sup> <sup/> -> 這是<sup>下標<sup/>字
 
+---
 # 引用文本 Quotation '>'
 This is not a quote.
 > This is a quote.
 
 # 引用 Code '`'
-使用快捷鍵 -> Ctrl + e
-
-- 文字內引用 Code ->
-
+- 使用快捷鍵 -> **Ctrl + e**
+- 文字內引用 Code -> '`'<br>
   Use `git status` to list all new or modified files that haven't yet been committed.
-- 獨立區塊引用 Code ->
-
+- 獨立區塊引用 Code -> '```'<br>
   Some basic Git commands are:
   ```
   git status
   git add
   git commit
   ```
-
+---
 # 字體顏色
 
 Color  語法          範例<br>
@@ -42,3 +41,25 @@ RGB	  `rgb(R,G,B)`   `rgb(9, 105, 218)`<br>
 HSL	  `hsl(H,S,L)`   `hsl(212, 92%, 45%)`<br>
 
 範例 -> The background color is `#ffffff` for light mode and `#000000` for dark mode.
+
+---
+# 超連結
+- **網頁超連結**<br>
+  語法: \[顯示文字](連結網址)<br>
+  範例: This site was built using [GitHub Page](https://pages.github.com/)
+- **章節超連結**<br>
+  語法: \[顯示文字](#章節標題名稱)<br>
+  作用: 將連結指向同個 .md 檔案中的***標題***，點選標題<ins>左邊出現的*小鏈結*圖示<ins/>即可<br>
+  範例: 指向[大標題位置](#大標題)
+- **重複章節標題 vs. 章節超連結**<br>
+  範例：<br>
+  \## This heading is not unique in the file<br>
+  \## This heading is not unique in the file<br>
+  \## This heading is not unique in the file<br>
+  GitHub 會將重複標題名稱以標號區別：<br>
+  \[顯示文字](# this-heading-is-not-unique-in-the-file)<br>
+  \[顯示文字](# this-heading-is-not-unique-in-the-file-1)<br>
+  \[顯示文字](# this-heading-is-not-unique-in-the-file-2)<br>
+- **相對連結 Relative Link**<br>
+  
+  
