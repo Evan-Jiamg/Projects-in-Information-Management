@@ -33,3 +33,12 @@ This is not a quote.
   git add
   git commit
   ```
+
+# 字體顏色
+
+Color  語法          範例<br>
+HEX	  `#RRGGBB`      `#0969DA`<br>
+RGB	  `rgb(R,G,B)`   `rgb(9, 105, 218)`<br>
+HSL	  `hsl(H,S,L)`   `hsl(212, 92%, 45%)`<br>
+
+範例 -> The background color is `#ffffff` for light mode and `#000000` for dark mode.
