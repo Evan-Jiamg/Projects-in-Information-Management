@@ -248,14 +248,19 @@ $$
 
 **Consider 具有 Intrinsic Opinions 的三個個體：**
 - 設定三個個體的內在意見（Intrinsic Opinions）：
+
 $$
 s_1 = 0, \quad s_2 = 1, \quad s_3 = 2
 $$
+
 - 定義 Nash 均衡結果為
+
 $$
 z_1^* = \frac{(1-w_1)w_2}{w_2-w_1}, \quad z_2^* = 1, \quad z_3^* = 2 - \frac{(1-w_1)w_2}{w_2-w_1}
 $$
+
 - Social 最佳結果為
+
 $$
 o_1 = \frac{1-w_1}{w_2-w_1}, \quad o_2 = 1, \quad o_3 = 2 - \frac{1-w_1}{w_2-w_1}
 $$
