@@ -166,7 +166,10 @@ $$
 
 #### 1. 上界 (Robust Upper Bound)
 $$
-A_1 = \left\{ (\lambda, \mu) : f(x) + 2y - xf'(x) \leq \lambda f(y) + \mu f(x), \; \forall x, y \geq 0 \right\}
+A_1 = \left\{ (\lambda, \mu) :
+f(x) + 2y - x f'(x) \le \lambda f(y) + \mu f(x),
+\ \forall x, y \ge 0
+\right\}
 $$
 
 $$
