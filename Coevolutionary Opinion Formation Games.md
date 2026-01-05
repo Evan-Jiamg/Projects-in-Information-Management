@@ -2,25 +2,23 @@
 
 ## 研究動機 + 核心概念
 
-### 研究主題
+### 一、研究主題
 
 Paper提出一個由 **社群網路的意見 (Opinions in Social Networks)** 所形成的博弈論模型 (Game-Theoretic Models)，研究意見 (Opinions) 和 Friendships 如何共同演化。
 
-### 核心研究問題
+### 二、核心研究問題
 
-#### 個體如何選擇意見
+#### 1. 個體如何選擇意見
 - 具有固定 Intrinsic Opinions 的個體 A，會根據其他個體 Opinion，以及自身對該 Opinion 的信心，來選擇自己的 Expressed Opinion
 
-#### Social Network 如何形成
+#### 2. Social Network 如何形成
 - Social Network 的形成取決於個體的 Expressed Opinion
 
-### 理論基礎
-
-Models 中的 Nodes 透過 **< Maximize 與朋友之間的意見一致性 >** 來形成自身 Opinion
-
-- 意見一致性取決於每個朋友間意見差異加權的關係強度
-- 透過概括 FOCS 2011 最新研究 – 有界信心模型 (Bounded Confidence Type Models)，來定義這一過程的均衡的社會成本
-- Bindel 等人透過考慮無政府狀態的代價 (Price of Anarchy, PoA)，來分析達到均衡時的品質
+### 三、理論基礎
+  - Models 中的 Nodes 透過 **< Maximize 與朋友之間的意見一致性 >** 來形成自身 Opinion
+  - 意見一致性取決於每個朋友間意見差異加權的關係強度
+  - 透過概括 FOCS 2011 最新研究 – 有界信心模型 (Bounded Confidence Type Models)，來定義這一過程的均衡的社會成本
+  - Bindel 等人透過考慮無政府狀態的代價 (Price of Anarchy, PoA)，來分析達到均衡時的品質
 
 ---
 
