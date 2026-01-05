@@ -300,9 +300,11 @@ $$
 $$
 
  - **Tight Lower Bound:**
+
 $$
 \text{PoA} = \frac{\lambda}{1-\mu}
 $$
+
 ---
 
 ## 非對稱模型
