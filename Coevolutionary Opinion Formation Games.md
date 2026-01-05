@@ -24,12 +24,12 @@ Paper提出一個由 **社群網路的意見 (Opinions in Social Networks)** 所
 
 ## Paper 分析方式
 
-### 社會成本 (Social Cost)
+### 一、社會成本 (Social Cost)
 
 - 衡量所有個體在均衡狀態下的總成本
 - 包含：個體之間的 Expressed Opinion 差異成本 + 個體自身的 Intrinsic vs. Expressed Opinion 差異成本
 
-### 無政府狀態的代價 (Price of Anarchy)
+### 二、無政府狀態的代價 (Price of Anarchy)
 
 #### 定義
 
