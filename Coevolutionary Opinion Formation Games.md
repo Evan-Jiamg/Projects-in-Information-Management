@@ -81,8 +81,10 @@ $$
 
 #### 2. 條件
 $$
-\forall i, \forall z_i \in \text{support}(\sigma), \forall z_i' \in Z_i
+\forall i, \ \forall z_i' \in Z_i : \quad
+C_i(z_i^*, z_{-i}^*) \le C_i(z_i', z_{-i}^*)
 $$
+
 - 允許個體間「策略相關」，使用條件期望，讓個體知道自己被建議採用的情況下
 
 ### Pure NE vs. Mixed NE vs. Correlated Equilibrium 三者間關係
@@ -153,14 +155,14 @@ $$
 
 #### 2. 模型假設
 - Social Network 是 **Fixed + Undirected**
-- 權重函數$$$$具有：convex, differentiable, symmetric 特性
-- $$s_i$$：個體$$i$$的 Intrinsic Opinion
-- $$z_i$$：個體$$i$$的 Expressed Opinion
-- $$N(i)$$：個體$$i$$相鄰的所有節點 (Neighbors of)
+- 權重函數$$ f,g $$具有：convex, differentiable, symmetric 特性
+- $$s_i$$：個體$$ i $$的 Intrinsic Opinion
+- $$z_i$$：個體$$ i $$的 Expressed Opinion
+- $$N(i)$$：個體$$ i $$相鄰的所有節點 (Neighbors of)
 
 **成本函數解釋：**
-- 第一項：個體$$i$$ vs. 鄰居 Expressed Opinion 差異的成本
-- 第二項：個體$$i$$ Intrinsic vs. Expressed Opinion 差異的成本
+- 第一項：個體$$ i $$ vs. 鄰居 Expressed Opinion 差異的成本
+- 第二項：個體$$ i $$ Intrinsic vs. Expressed Opinion 差異的成本
 
 ### 二、PoA 上下界分析
 
@@ -172,11 +174,13 @@ f(x) + 2y - x f'(x) \le \lambda f(y) + \mu f(x),
 \}
 $$
 
-
-
 $$
-A_2 = \left\{ (\lambda, \mu) : g(u) + (v - u)g'(u) \leq \lambda g(v) + \mu g(u), \; \forall u, v \geq 0 \right\}
+A_2 = \{ (\lambda, \mu) :
+g(u) + (v - u) g'(u) \le \lambda g(v) + \mu g(u),
+\ \forall u, v \ge 0
+\}
 $$
+
 - (集合$$A_1$$：Neighbor Effect 函數$$f \in \mathcal{F}$$產生的 Constraintst
 - (集合$$A_2$$：Intrinsic Cost 函數$$g \in \mathcal{G}$$產生的 Constraints)
 
@@ -195,8 +199,11 @@ $$
 定義 PoA 的上界函數：
 
 $$
-\zeta(\mathcal{F}, \mathcal{G}) = \inf \left\{ \frac{\lambda}{1 - \mu} : (\lambda, \mu) \in A_1 \cap A_2, \; \mu < 1 \right\}
+\zeta(\mathcal{F}, \mathcal{G}) =
+\inf \{ \tfrac{\lambda}{1 - \mu} :
+(\lambda, \mu) \in A_1 \cap A_2,\ \mu < 1 \}
 $$
+
 
 因此：
 
