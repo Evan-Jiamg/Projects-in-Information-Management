@@ -31,16 +31,23 @@ Paper提出一個由 **社群網路的意見 (Opinions in Social Networks)** 所
 
 ### 二、無政府狀態的代價 (Price of Anarchy)
 
-#### 定義
+#### 1. 定義
+$$
+\text{PoA} = \frac{\text{均衡社會成本}}{\text{最適社會成本 (最小社會成本)}}
+$$
 
-#### 前提假設
+$$
+= \frac{\text{Cost of the Worst Equilibrium Outcome}}{\text{Optimal Social Outcome}}
+$$
+
+#### 2. 前提假設
 - 假設個體 Intrinsic Opinion 皆固定，並且當下的 Optimal Social Outcome 被明確定義
 
-#### 三種 Equilibrium Solution 的概念
+## 三種 Equilibrium Solution 的概念
 
 Paper 利用 3 種 Solution concept 定義 Equilibrium，再藉由 Equilibrium 集合計算 PoA，並且每種 Concept 限制都比前者寬鬆，所以能夠比較 Worst Equilibrium Outcome 和 Optimal Equilibrium Outcome 的差距
 
-##### A. Pure NE
+### A. Pure NE
 
 **定義：**
 - (：個體的任何其他可能意見)
