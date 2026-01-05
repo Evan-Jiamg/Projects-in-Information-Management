@@ -166,11 +166,12 @@ $$
 
 #### 1. 上界 (Robust Upper Bound)
 $$
-A_1 = \left\{ (\lambda, \mu) :
+A_1 = \{ (\lambda, \mu) :
 f(x) + 2y - x f'(x) \le \lambda f(y) + \mu f(x),
 \ \forall x, y \ge 0
-\right\}
+\}
 $$
+
 
 
 $$
