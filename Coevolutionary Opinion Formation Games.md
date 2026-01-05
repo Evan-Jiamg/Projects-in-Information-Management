@@ -90,8 +90,7 @@ $$
 #### 2. 條件
 
 $$
-\forall i, \ \forall z_i' \in Z_i : \quad
-C_i(z_i^*, z_{-i}^*) \le C_i(z_i', z_{-i}^*)
+\forall i, \forall z_i' \in Z_i : \quad C_i(z_i^*, z_{-i}^*) \leq C_i(z_i', z_{-i}^*)
 $$
 
 
