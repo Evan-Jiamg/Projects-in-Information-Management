@@ -390,11 +390,3 @@ Then, by combining factor from Lemma 4.2
 
 ---
 
-## References
-
-研究筆記內容基於論文 "Coevolutionary Opinion Formation Games" 的分析整理
-
-## License
-
-This work is for academic and educational purposes.
-
