@@ -90,7 +90,7 @@ $$
 #### 2. 條件
 
 $$
-\forall i, \forall z_i' \in Z_i : \quad C_i(z_i^*, z_{-i}^*) \leq C_i(z_i', z_{-i}^*)
+\forall i, \forall z_i \in \text{support}(\sigma), \forall z_i' \in Z_i : \quad \mathbb{E}_{z_{-i} \sim \sigma_{-i} \mid z_i}[C_i(z_i, z_{-i})] \leq \mathbb{E}_{z_{-i} \sim \sigma_{-i} \mid z_i}[C_i(z_i', z_{-i})]
 $$
 
 
