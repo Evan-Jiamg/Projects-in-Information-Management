@@ -94,6 +94,7 @@ $$
 C_i(z_i^*, z_{-i}^*) \le C_i(z_i', z_{-i}^*)
 $$
 
+
 - 允許個體間「策略相關」，使用條件期望，讓個體知道自己被建議採用的情況下
 
 ### Pure NE vs. Mixed NE vs. Correlated Equilibrium 三者間關係
