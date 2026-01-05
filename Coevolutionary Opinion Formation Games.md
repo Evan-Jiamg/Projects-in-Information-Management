@@ -301,7 +301,7 @@ $$
 
  - **Tight Lower Bound:**
 $$
-\boxed{\text{PoA} = \frac{\lambda}{1-\mu}}
+\text{PoA} = \frac{\lambda}{1-\mu}
 $$
 ---
 
