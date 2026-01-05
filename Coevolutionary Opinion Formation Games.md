@@ -302,7 +302,7 @@ $$
  - **Tight Lower Bound:**
 
 $$
-\text{PoA} >= \frac{\lambda}{1-\mu}
+\text{PoA} \ge \dfrac{\lambda}{1-\mu}
 $$
 
 ---
