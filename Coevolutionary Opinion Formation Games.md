@@ -172,6 +172,7 @@ f(x) + 2y - x f'(x) \le \lambda f(y) + \mu f(x),
 \right\}
 $$
 
+
 $$
 A_2 = \left\{ (\lambda, \mu) : g(u) + (v - u)g'(u) \leq \lambda g(v) + \mu g(u), \; \forall u, v \geq 0 \right\}
 $$
