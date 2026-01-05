@@ -155,14 +155,14 @@ $$
 
 #### 2. 模型假設
 - Social Network 是 **Fixed + Undirected**
-- 權重函數$ f,g $具有：convex, differentiable, symmetric 特性
-- $$s_i$$：個體$i$的 Intrinsic Opinion
-- $$z_i$$：個體$ i $的 Expressed Opinion
-- $$N(i)$$：個體$ i $相鄰的所有節點 (Neighbors of)
+- 權重函數 f,g 具有：convex, differentiable, symmetric 特性
+- $$s_i$$：個體 i 的 Intrinsic Opinion
+- $$z_i$$：個體 i 的 Expressed Opinion
+- $$N(i)$$：個體 i 相鄰的所有節點 (Neighbors of)
 
 **成本函數解釋：**
-- 第一項：個體$ i $ vs. 鄰居 Expressed Opinion 差異的成本
-- 第二項：個體$ i $ Intrinsic vs. Expressed Opinion 差異的成本
+- 第一項：個體 i  vs. 鄰居 Expressed Opinion 差異的成本
+- 第二項：個體 i Intrinsic vs. Expressed Opinion 差異的成本
 
 ### 二、PoA 上下界分析
 
