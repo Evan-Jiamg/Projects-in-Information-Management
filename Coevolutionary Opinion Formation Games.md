@@ -105,16 +105,17 @@ $$
 
 #### 2. 關係證明：
 - A. Pure NE ⊆ Mixed NE
-- 
+  
 $$
 z_i^* \leftrightarrow \sigma_i = \delta_{z_i^*}
-
 $$
+
 - B. Mixed NE ⊆ Correlated Equilibrium
   
 $$
 \sigma = \prod_{i} \sigma_i \leftrightarrow \sigma_{-i \mid z_i} = \sigma_{-i}
 $$
+
 ---
 
 ## 局部平滑性論證 (Local Smoothness Arguments)
