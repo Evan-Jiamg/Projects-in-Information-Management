@@ -155,14 +155,14 @@ $$
 
 #### 2. 模型假設
 - Social Network 是 **Fixed + Undirected**
-- 權重函數$$ f,g $$具有：convex, differentiable, symmetric 特性
-- $$s_i$$：個體$$ i $$的 Intrinsic Opinion
-- $$z_i$$：個體$$ i $$的 Expressed Opinion
-- $$N(i)$$：個體$$ i $$相鄰的所有節點 (Neighbors of)
+- 權重函數$ f,g $具有：convex, differentiable, symmetric 特性
+- $$s_i$$：個體$ i $的 Intrinsic Opinion
+- $$z_i$$：個體$ i $的 Expressed Opinion
+- $$N(i)$$：個體$ i $相鄰的所有節點 (Neighbors of)
 
 **成本函數解釋：**
-- 第一項：個體$$ i $$ vs. 鄰居 Expressed Opinion 差異的成本
-- 第二項：個體$$ i $$ Intrinsic vs. Expressed Opinion 差異的成本
+- 第一項：個體$ i $ vs. 鄰居 Expressed Opinion 差異的成本
+- 第二項：個體$ i $ Intrinsic vs. Expressed Opinion 差異的成本
 
 ### 二、PoA 上下界分析
 
@@ -181,8 +181,8 @@ g(u) + (v - u) g'(u) \le \lambda g(v) + \mu g(u),
 \}
 $$
 
-- (集合$$A_1$$：Neighbor Effect 函數$$f \in \mathcal{F}$$產生的 Constraintst
-- (集合$$A_2$$：Intrinsic Cost 函數$$g \in \mathcal{G}$$產生的 Constraints)
+- (集合$A_1$：Neighbor Effect 函數$f \in \mathcal{F}$產生的 Constraintst
+- (集合$A_2$：Intrinsic Cost 函數$$ \in \mathcal{G}$產生的 Constraints)
 
 局部平滑性不等式：
 
@@ -220,9 +220,9 @@ $$
 #### 2. 下界 (Tight Lower Bound)
 
 ##### < First Stage >
-- 給定，$$\text{PoA Bound of } \frac{\lambda}{1-\mu} \text{ with } (\lambda, \mu) \in A_1 \cap A_2 $$
+- 給定，$\text{PoA Bound of } \frac{\lambda}{1-\mu} \text{ with } (\lambda, \mu) \in A_1 \cap A_2 $
 
-- 定義：$$ \zeta_n = \min_{(\lambda, \mu) \in C_n} \frac{\lambda}{1-\mu} > 1 $$
+- 定義：$ \zeta_n = \min_{(\lambda, \mu) \in C_n} \frac{\lambda}{1-\mu} > 1 $
   - 因為為函數所限制的平面，所定義的 Convex Region，因此，最小值落在邊界
 
 ##### < Second Stage >
@@ -240,11 +240,11 @@ $$
 
 - 最小值發生在 f, g 的交界，對應的參數為$$(x_1,y_1,f)$$和$$(x_2,y_2,g)$$
 
-- 同時，when $$w_1 = \frac{x_1}{y_1}$$ 和$$w_2 = \frac{x_2}{y_2}$$，Satisfy $$(w_1 - 1)(w_2 - 1) \leq 0 $$
+- 同時，when $w_1 = \frac{x_1}{y_1}$$ 和$w_2 = \frac{x_2}{y_2}$，Satisfy $(w_1 - 1)(w_2 - 1) \leq 0 $
 
 ##### < Third Stage >
 
-為了證明 Lower Bound = $$\frac{\lambda}{1-\mu}$$ 為 Tight，Paper 建構了 Game Instance，來使 PoA 接近該數值。
+為了證明 Lower Bound = $\frac{\lambda}{1-\mu}$ 為 Tight，Paper 建構了 Game Instance，來使 PoA 接近該數值。
 
 **Consider 具有 Intrinsic Opinions 的三個個體：**
 - 設定三個個體的內在意見（Intrinsic Opinions）：
