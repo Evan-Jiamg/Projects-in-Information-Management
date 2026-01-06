@@ -171,7 +171,7 @@ $$
 - 權重函數 f,g 具有：convex, differentiable, symmetric 特性
 - $$s_i$$：個體 i 的 Intrinsic Opinion
 - $$z_i$$：個體 i 的 Expressed Opinion
-- $$N(i)$$：個體 i 相鄰的所有節點 (Neighbors of)
+- $$N(i)$$：個體 i 相鄰的所有節點 (Neighbors of i)
 
 #### 3.成本函數解釋
 - 第一項：個體 i  vs. 鄰居 Expressed Opinion 差異的成本
@@ -318,75 +318,165 @@ $$
 #### 2. 模型假設
 
 - Social Network 是 **Dynamic + Directed**
-- 引入參數：作為自身 Opinion 的權重比例
+- $$ N(i) = \{ \text{K agents with smallest } |z_j - s_i| \} $$
+- 引入參數 $$ \rho $$：作為自身 Opinion 的權重比例
 
-**成本函數解釋：**
-- 大 → Narrow minded (目光狹隘，堅持己見)，個體的 Social Cost 下降
-- 小 → Broad minded (心胸開闊，容易受他人意見影響)
+#### 3. 成本函數解釋：
+- $$ \rho $$ 大 → Narrow minded (目光狹隘，堅持己見)，個體的 Social Cost 下降
+- $$ \rho $$ 小 → Broad minded (心胸開闊，容易受他人意見影響)
 
-### PoA 上下界分析
+### 二、PoA 上下界分析
 
-#### 上界
+#### 1. 上界
+$$
+\text{PoA} \leq \frac{(7+\epsilon)(2+\epsilon)}{1+\epsilon} \quad \text{for } \rho = 1+\epsilon, \; \epsilon > 0
+$$
 
-- ：上界
-- ：上界
+- $$ \rho \to 1^+ $$：上界 $$ \to 14 $$
+- $$ \rho \to \infty $$：上界 $$ \to 9 $$
 - 為單調遞減 (ρ 越大，上界越小)
 
 **Proof:**
 
-##### First Stage: 假設 z = s 情況 (表達意見 = 內在意見，代表所有個體都誠實表達)
+##### < First Stage: 假設 z = s 情況 (表達意見 = 內在意見，代表所有個體都誠實表達) >
 
-- ：為 Optimal Solution of 誠實策略
-- ：誠實策略之下，OPT 是近似
-- ：誠實策略之下，OPT 是近似，為最優解
+For $\rho \geq 0$,
 
-##### Second Stage: 局部平滑性不等式
+$$
+Q(i) = \{ \text{K closest } s_j \text{ to } s_i \}
+$$
 
-- ：
-- ：
+$$
+C(s) = \sum_{i} \sum_{j \in Q(i)} (s_j - s_i)^2
+$$
 
-##### Third Stage: 利用 K-NN 性質
+$$
+\text{OPT} \geq \frac{\rho}{\rho + 6} \cdot C(s)
+$$
 
-- 因為是 K 個最接近的
-- 是 K 個最接近的
+$$
+\frac{C(s)}{\text{OPT}} \leq \frac{\rho + 6}{\rho} = 1 + \frac{6}{\rho}
+$$
+
+- OPT：為 Optimal Solution of 誠實策略
+- $$ \rho = 1 $$：誠實策略之下，OPT 是近似 $$7^-$$
+- $$ \rho \to \infty $$：誠實策略之下，OPT 是近似 $$1^+$$，為最優解
+
+##### < Second Stage: 局部平滑性不等式 >
+
+**For Fixed $j \in S(i)$：**
+
+$$
+(z_i - z_j)^2 + (z_i - s_i)^2 + 2(s_i - z_i)(z_i - z_j) = (s_i - z_j)^2
+$$
+
+**Exists inequality function：**
+
+$$
+\sum_{j \in S(i)} (z_i - z_j)^2 + (s_i - z_i) \sum_{j \in S(i)} 2(z_i - z_j) = \sum_{j \in S(i)} (s_i - z_j)^2 - \sum_{j \in S(i)} (s_i - z_i)^2
+$$
+
+##### < Third Stage: 利用 K-NN 性質 >
+
+- $$ S(i) $$ 因為是 K 個最接近 $$ s_i $$ 的 $$ z_j $$
+- $$ Q(i) $$ 是 K 個最接近 $$ s_i $$ 的 $$ s_j $$
 - 所以
 
-##### Fourth Stage: 使用三角不等式
+$$
+\sum_{j \in S(i)} (s_i - z_j)^2 \leq \sum_{j \in Q(i)} (s_i - z_j)^2
+$$
+
+##### < Fourth Stage: 使用三角不等式 >
 
 使用三角不等式：
 
-##### Fifth Stage: 每個 j 最多出現在 2K 個集合中
+$$
+(a + b)^2 \leq (d^2 + 1) a^2 + \left(\frac{1}{d^2} + 1\right) b^2 \quad \text{for any } a, b, d \geq 0
+$$
 
-因為在實數線上，for any
-- 最多有 K 個 such that and
-- 最多有 K 個 such that and
+令 $a = s_i - s_j$，$b = s_j - z_j$，$d^2 = \frac{\rho - 1}{2}$
+
+則：
+
+$$
+(s_i - z_j)^2 = (s_i - s_j + s_j - z_j)^2 \leq \left(1 + \frac{2}{\rho - 1}\right) (s_i - s_j)^2 + \frac{\rho + 1}{2} (s_j - z_j)^2
+$$
+
+##### < Fifth Stage: 每個 j 最多出現在 2K 個集合中 >
+
+因為 $$ s_j $$ 在實數線上，for any $$ s_j $$
+- 最多有 K 個 such that $s_i \leq s_j$ and $s_j \in Q(i)$
+- 最多有 K 個 such that $s_i > s_j$ and  $s_j \in Q(i)$
 - 因此，總共最多 2K 個
 
-##### Final Stage: 最終不等式
+$$
+\sum_{i} \sum_{j \in Q(i)} (s_j - z_j)^2 \leq 2K \sum_{j} (s_j - z_j)^2 = 2K \sum_{j} (z_j - s_j)^2
+$$
 
-Let：
+##### < Final Stage: 最終不等式 >
+
+Let：$1 + \frac{2}{\rho - 1}$
+
+$$
+1 + \frac{2}{\rho - 1} = 1 + \frac{2}{\epsilon} = \frac{\epsilon + 2}{\epsilon}
+$$
+
+$$
+\rho + 1 = (1 + \epsilon) + 1 = 2 + \epsilon
+$$
 
 Thus,
+
+$$
+\lambda = \frac{\epsilon + 2}{\epsilon}, \quad \mu = 0
+$$
 
 Then, by combining factor from Lemma 4.2
 
 **Lemma 4.2:**
 
-**補充：**
-- 因為 Pure NE 可能不存在 (Proposition 4.1: 當, , and weight, Pure NE 不存在)，所以採用 Local Smoothness，來分析 Correlated Equilibrium
+$$
+\text{PoA} \leq \frac{\rho + 6}{\rho} \cdot \frac{\lambda}{1 - \mu}
+$$
 
-#### 下界
+$$
+= \frac{\rho + 6}{\rho} \cdot \frac{\lambda}{1 - 0} = \frac{\rho + 6}{\rho} \cdot \lambda
+$$
+
+$$
+\frac{\rho + 6}{\rho} = \frac{(1 + \epsilon) + 6}{1 + \epsilon} = \frac{7 + \epsilon}{1 + \epsilon}
+$$
+
+$$
+\text{PoA} \leq \frac{7 + \epsilon}{1 + \epsilon} \cdot \frac{\epsilon + 2}{\epsilon} = \frac{(7 + \epsilon)(\epsilon + 2)}{(1 + \epsilon)\epsilon} \cdot \epsilon = \frac{(7 + \epsilon)(2 + \epsilon)}{1 + \epsilon}
+$$
+
+$$
+\text{PoA} \leq \frac{(7 + \epsilon)(2 + \epsilon)}{1 + \epsilon}
+$$
+
+**補充：**
+- 因為 Pure NE 可能不存在 (Proposition 4.1: 當 $$ s_1 = 0, \quad s_2 = \frac{1}{2}, \quad s_3 = 1 $$, and weight $$ \rho = 1 $$, Pure NE 不存在)，所以採用 Local Smoothness，來分析 Correlated Equilibrium
+
+#### 2. 下界
+
+$$
+\text{PoA} \geq \frac{1}{\rho^2}
+$$
 
 **Proof:**
 
-##### 概念
+##### < 概念 >
 1. 先找到一個壞的 Nash Equilibrium (成本高)
 2. 再找到一個好的解 (接近最優，成本低)
 3. 證明
 
-##### 詳細證明過程
+$$
+\text{PoA} = \frac{\text{Nash Equilibrium Cost}}{\text{Optimal Cost}} \geq \frac{1}{\rho^2}
+$$
 
-(後續內容...)
+##### < 詳細證明過程 >
+
 
 ---
 
