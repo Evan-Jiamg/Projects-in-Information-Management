@@ -77,7 +77,7 @@ $$
 
 - 個體之間的「策略獨立」，並且要求「實際會用到的策略」必須一樣好，代表社會成本：現在用的策略 ≤ 任何替代策略
 
-#### C. Correlated Equilibrium (CE)
+### C. Correlated Equilibrium (CE)
 
 #### 1. 定義
 
