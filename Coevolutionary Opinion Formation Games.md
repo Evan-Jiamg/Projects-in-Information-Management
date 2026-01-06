@@ -378,8 +378,8 @@ $$
 
 ##### < Third Stage: 利用 K-NN 性質 >
 
-- $$ S(i) $$ 因為是 K 個最接近 $s_i$ 的 $z_j$
-- $$ Q(i) $$ 是 K 個最接近 $s_i$ 的 $s_j$
+- $S(i)$ 因為是 K 個最接近 $s_i$ 的 $z_j$
+- $Q(i)$ 是 K 個最接近 $s_i$ 的 $s_j$
 - 所以
 
 $$
@@ -394,7 +394,7 @@ $$
 (a + b)^2 \leq (d^2 + 1) a^2 + \left(\frac{1}{d^2} + 1\right) b^2 \quad \text{for any } a, b, d \geq 0
 $$
 
-- 令 $a = s_i - s_j$，$b = s_j - z_j$，$d^2 = \frac{\rho - 1}{2}$
+- 令 $a = s_i - s_j, b = s_j - z_j, d^2 = \frac{\rho - 1}{2}$
 
 - 則：
 
@@ -415,7 +415,11 @@ $$
 
 ##### < Final Stage: 最終不等式 >
 
-- Let：$1 + \frac{2}{\rho - 1}$
+- Let：
+
+$$
+1 + \frac{2}{\rho - 1}
+$$
 
 $$
 1 + \frac{2}{\rho - 1} = 1 + \frac{2}{\epsilon} = \frac{\epsilon + 2}{\epsilon}
@@ -454,7 +458,7 @@ $$
 $$
 
 - **補充：**
-- 因為 Pure NE 可能不存在 (Proposition 4.1: 當 $$ s_1 = 0, \quad s_2 = \frac{1}{2}, \quad s_3 = 1 $$, and weight $$ \rho = 1 $$, Pure NE 不存在)，所以採用 Local Smoothness，來分析 Correlated Equilibrium
+- 因為 Pure NE 可能不存在 (Proposition 4.1: 當 $s_1 = 0, \quad s_2 = \frac{1}{2}, \quad s_3 = 1$, and weight $\rho = 1$, Pure NE 不存在)，所以採用 Local Smoothness，來分析 Correlated Equilibrium
 
 #### 2. 下界
 
