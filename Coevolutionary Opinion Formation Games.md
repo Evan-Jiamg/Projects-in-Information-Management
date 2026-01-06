@@ -318,12 +318,12 @@ $$
 #### 2. 模型假設
 
 - Social Network 是 **Dynamic + Directed**
-- $$ N(i) = \{ \text{K agents with smallest } |z_j - s_i| \} $$
+- $N(i) = \{ \text{K agents with smallest } |z_j - s_i| \}$
 - 引入參數 $\rho$：作為自身 Opinion 的權重比例
 
 #### 3. 成本函數解釋：
-- $$ \rho $$ 大 → Narrow minded (目光狹隘，堅持己見)，個體的 Social Cost 下降
-- $$ \rho $$ 小 → Broad minded (心胸開闊，容易受他人意見影響)
+- $\rho$ 大 → Narrow minded (目光狹隘，堅持己見)，個體的 Social Cost 下降
+- $\rho$ 小 → Broad minded (心胸開闊，容易受他人意見影響)
 
 ### 二、PoA 上下界分析
 
@@ -332,8 +332,8 @@ $$
 \text{PoA} \leq \frac{(7+\epsilon)(2+\epsilon)}{1+\epsilon} \quad \text{for } \rho = 1+\epsilon, \; \epsilon > 0
 $$
 
-- $$ \rho \to 1^+ $$：上界 $$ \to 14 $$
-- $$ \rho \to \infty $$：上界 $$ \to 9 $$
+- $\rho \to 1^+$：上界 $\to 14$
+- $\rho \to \infty$：上界 $\to 9$
 - 為單調遞減 (ρ 越大，上界越小)
 
 **Proof:**
@@ -359,8 +359,8 @@ $$
 $$
 
 - OPT：為 Optimal Solution of 誠實策略
-- $$ \rho = 1 $$：誠實策略之下，OPT 是近似 $$7^-$$
-- $$ \rho \to \infty $$：誠實策略之下，OPT 是近似 $$1^+$$，為最優解
+- $\rho = 1$：誠實策略之下，OPT 是近似 $7^-$
+- $\rho \to \infty$：誠實策略之下，OPT 是近似 $1^+$，為最優解
 
 ##### < Second Stage: 局部平滑性不等式 >
 
@@ -378,8 +378,8 @@ $$
 
 ##### < Third Stage: 利用 K-NN 性質 >
 
-- $$ S(i) $$ 因為是 K 個最接近 $$ s_i $$ 的 $$ z_j $$
-- $$ Q(i) $$ 是 K 個最接近 $$ s_i $$ 的 $$ s_j $$
+- $$ S(i) $$ 因為是 K 個最接近 $s_i$ 的 $z_j$
+- $$ Q(i) $$ 是 K 個最接近 $s_i$ 的 $s_j$
 - 所以
 
 $$
@@ -404,7 +404,7 @@ $$
 
 ##### < Fifth Stage: 每個 j 最多出現在 2K 個集合中 >
 
--因為 $$ s_j $$ 在實數線上，for any $$ s_j $$
+-因為 $s_j$ 在實數線上，for any $s_j$
   - 最多有 K 個 such that $s_i \leq s_j$ and $s_j \in Q(i)$
   - 最多有 K 個 such that $s_i > s_j$ and  $s_j \in Q(i)$
 - 因此，總共最多 2K 個
@@ -453,7 +453,7 @@ $$
 \text{PoA} \leq \frac{(7 + \epsilon)(2 + \epsilon)}{1 + \epsilon}
 $$
 
-**補充：**
+- **補充：**
 - 因為 Pure NE 可能不存在 (Proposition 4.1: 當 $$ s_1 = 0, \quad s_2 = \frac{1}{2}, \quad s_3 = 1 $$, and weight $$ \rho = 1 $$, Pure NE 不存在)，所以採用 Local Smoothness，來分析 Correlated Equilibrium
 
 #### 2. 下界
