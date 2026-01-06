@@ -340,7 +340,7 @@ $$
 
 ##### < First Stage: 假設 z = s 情況 (表達意見 = 內在意見，代表所有個體都誠實表達) >
 
-For $\rho \geq 0$,
+- For $\rho \geq 0$,
 
 $$
 Q(i) = \{ \text{K closest } s_j \text{ to } s_i \}
@@ -364,13 +364,13 @@ $$
 
 ##### < Second Stage: 局部平滑性不等式 >
 
-**For Fixed $j \in S(i)$：**
+- For Fixed $j \in S(i)$：
 
 $$
 (z_i - z_j)^2 + (z_i - s_i)^2 + 2(s_i - z_i)(z_i - z_j) = (s_i - z_j)^2
 $$
 
-**Exists inequality function：**
+- Exists inequality function：
 
 $$
 \sum_{j \in S(i)} (z_i - z_j)^2 + (s_i - z_i) \sum_{j \in S(i)} 2(z_i - z_j) = \sum_{j \in S(i)} (s_i - z_j)^2 - \sum_{j \in S(i)} (s_i - z_i)^2
@@ -388,15 +388,15 @@ $$
 
 ##### < Fourth Stage: 使用三角不等式 >
 
-使用三角不等式：
+- 使用三角不等式：
 
 $$
 (a + b)^2 \leq (d^2 + 1) a^2 + \left(\frac{1}{d^2} + 1\right) b^2 \quad \text{for any } a, b, d \geq 0
 $$
 
-令 $a = s_i - s_j$，$b = s_j - z_j$，$d^2 = \frac{\rho - 1}{2}$
+- 令 $a = s_i - s_j$，$b = s_j - z_j$，$d^2 = \frac{\rho - 1}{2}$
 
-則：
+- 則：
 
 $$
 (s_i - z_j)^2 = (s_i - s_j + s_j - z_j)^2 \leq \left(1 + \frac{2}{\rho - 1}\right) (s_i - s_j)^2 + \frac{\rho + 1}{2} (s_j - z_j)^2
@@ -404,9 +404,9 @@ $$
 
 ##### < Fifth Stage: 每個 j 最多出現在 2K 個集合中 >
 
-因為 $$ s_j $$ 在實數線上，for any $$ s_j $$
-- 最多有 K 個 such that $s_i \leq s_j$ and $s_j \in Q(i)$
-- 最多有 K 個 such that $s_i > s_j$ and  $s_j \in Q(i)$
+-因為 $$ s_j $$ 在實數線上，for any $$ s_j $$
+  - 最多有 K 個 such that $s_i \leq s_j$ and $s_j \in Q(i)$
+  - 最多有 K 個 such that $s_i > s_j$ and  $s_j \in Q(i)$
 - 因此，總共最多 2K 個
 
 $$
@@ -415,7 +415,7 @@ $$
 
 ##### < Final Stage: 最終不等式 >
 
-Let：$1 + \frac{2}{\rho - 1}$
+- Let：$1 + \frac{2}{\rho - 1}$
 
 $$
 1 + \frac{2}{\rho - 1} = 1 + \frac{2}{\epsilon} = \frac{\epsilon + 2}{\epsilon}
@@ -425,15 +425,13 @@ $$
 \rho + 1 = (1 + \epsilon) + 1 = 2 + \epsilon
 $$
 
-Thus,
+- Thus,
 
 $$
 \lambda = \frac{\epsilon + 2}{\epsilon}, \quad \mu = 0
 $$
 
-Then, by combining factor from Lemma 4.2
-
-**Lemma 4.2:**
+- Then, by combining factor from Lemma 4.2
 
 $$
 \text{PoA} \leq \frac{\rho + 6}{\rho} \cdot \frac{\lambda}{1 - \mu}
