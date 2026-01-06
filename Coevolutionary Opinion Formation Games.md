@@ -168,7 +168,7 @@ $$
 
 #### 2. 模型假設
 - Social Network 是 **Fixed + Undirected**
-- 權重函數 f,g 具有：convex, differentiable, symmetric 特性
+- 權重函數 $f, g$ 具有：convex, differentiable, symmetric 特性
 - $$s_i$$：個體 i 的 Intrinsic Opinion
 - $$z_i$$：個體 i 的 Expressed Opinion
 - $$N(i)$$：個體 i 相鄰的所有節點 (Neighbors of i)
@@ -198,19 +198,19 @@ $$
 - 集合 $A_1$：Neighbor Effect 函數 $f \in \mathcal{F}$ 產生的 Constraints
 - 集合 $A_2$：Intrinsic Cost 函數 $g \in \mathcal{G}$ 產生的 Constraints
 
-局部平滑性不等式：
+- 局部平滑性不等式：
 
 $$
 \sum_{i=1}^{n} \left[ C_i(z_i, z_{-i}) + (o_i - z_i) \cdot \frac{\partial C_i(z_i, z_{-i})}{\partial z_i} \right] \leq \lambda \cdot C(o) + \mu \cdot C(z)
 $$
 
-從局部平滑性不等式可以推導出：
+- 可以推導出：
 
 $$
 \frac{\mathbb{E}_{z \sim \sigma}[C(z)]}{C(o)} \leq \frac{\lambda}{1 - \mu}
 $$
 
-定義 PoA 的上界函數：
+- 定義 PoA 的上界函數：
 
 $$
 \zeta(\mathcal{F}, \mathcal{G}) =
@@ -219,7 +219,7 @@ $$
 $$
 
 
-因此：
+- 因此：
 
 $$
 \text{PoA} \leq \frac{\lambda}{1 - \mu}
@@ -245,7 +245,7 @@ $$ \zeta_n = \min_{(\lambda, \mu) \in C_n} \frac{\lambda}{1-\mu} > 1 $$
   - 因為為函數所限制的平面，所定義的 Convex Region，因此，最小值落在邊界
 
 ##### < Second Stage >
-when,
+- when,
 
 $$
 \zeta_n > 1, \quad f \in \mathcal{F}, \quad g \in \mathcal{G}
@@ -319,7 +319,7 @@ $$
 
 - Social Network 是 **Dynamic + Directed**
 - $$ N(i) = \{ \text{K agents with smallest } |z_j - s_i| \} $$
-- 引入參數 $$ \rho $$：作為自身 Opinion 的權重比例
+- 引入參數 $\rho$：作為自身 Opinion 的權重比例
 
 #### 3. 成本函數解釋：
 - $$ \rho $$ 大 → Narrow minded (目光狹隘，堅持己見)，個體的 Social Cost 下降
