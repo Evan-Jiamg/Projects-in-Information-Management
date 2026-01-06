@@ -1,6 +1,6 @@
 # Coevolutionary Opinion Formation Games
 
-## 研究動機 + 核心概念
+## 壹、研究動機 + 核心概念
 
 ### 一、研究主題
 
@@ -22,7 +22,7 @@ Paper提出一個由 **社群網路的意見 (Opinions in Social Networks)** 所
 
 ---
 
-## Paper 分析方式
+## 貳、Paper 分析方式
 
 ### 一、社會成本 (Social Cost)
 
@@ -41,7 +41,7 @@ $$
 
 ---
 
-## 三種 Equilibrium Solution 的概念
+## 參、三種 Equilibrium Solution 的概念
 
 Paper 利用 3 種 Solution concept 定義 Equilibrium，再藉由 Equilibrium 集合計算 PoA，並且每種 Concept 限制都比前者寬鬆，所以能夠比較 Worst Equilibrium Outcome 和 Optimal Equilibrium Outcome 的差距
 
@@ -118,7 +118,7 @@ $$
 
 ---
 
-## 局部平滑性論證 (Local Smoothness Arguments)
+## 肆、局部平滑性論證 (Local Smoothness Arguments)
 
 ### 一、核心目的
 
@@ -152,11 +152,11 @@ $$
 
 ---
 
-## 對稱模型 vs. 非對稱模型
+## 伍、對稱模型 vs. 非對稱模型
 
 - Paper 研究在 **對稱 vs. 非對稱模型** 之下，Opinion 和 Friendship 共同演化的博弈，並為兩種模型提供 PoA 的上下界限
 
-## 對稱模型
+## 伍-1、對稱模型
 
 ### 一、社會成本分析
 
@@ -307,7 +307,7 @@ $$
 
 ---
 
-## 非對稱模型
+## 伍-2、非對稱模型
 
 ### 一、社會成本分析
 
