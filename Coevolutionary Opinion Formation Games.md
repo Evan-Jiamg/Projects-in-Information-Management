@@ -195,8 +195,8 @@ g(u) + (v - u) g'(u) \le \lambda g(v) + \mu g(u),
 \}
 $$
 
-- (集合 $ A_1 $：Neighbor Effect 函數 $ f \in \mathcal{F} $ 產生的 Constraintst
-- (集合 $ A_2 $：Intrinsic Cost 函數 $ \in \mathcal{G} $ 產生的 Constraints)
+- 集合 $$ A_1 $$：Neighbor Effect 函數 $$ f \in \mathcal{F} $$ 產生的 Constraints
+- 集合 $$ A_2 $$：Intrinsic Cost 函數 $$ \in \mathcal{G} $$ 產生的 Constraints
 
 局部平滑性不等式：
 
