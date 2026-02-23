@@ -474,7 +474,7 @@ $$
 $$
 
 ##### < 詳細證明過程 >
-
+![非對稱模型下界說明](https://github.com/Evan-Jiamg/Open-Source/issues/1#issue-3783653741)
 
 ---
 
