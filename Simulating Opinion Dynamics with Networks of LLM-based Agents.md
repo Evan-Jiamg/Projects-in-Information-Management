@@ -198,28 +198,27 @@ LLM Agents 對於「產生準確資訊」具有**強烈的固有偏見**：
 ## 柒、演算法：利用 LLM Agents 模擬意見動態
 
 - Input:
-  N 個 Agents 的 Personas {per_i}_{i=1}^N
+  N 個 Agents 的 Personas ${per_i}_{i=1}^N$
   Time Steps T
-  Opinion Classifier f_oc
+  Opinion Classifier $f_oc$
 
 - Output:
-  每位 Agent a_i 的意見軌跡 <o_i>
+  每位 Agent $a_i$ 的意見軌跡 $<o_i>$
 
 ---
 
-for i = 1 to N:
-    初始化 a_i 的 Persona per_i、意見 o_i^{t=0}、記憶 m_i^{t=0}
+- for i = 1 to N:
+    初始化 $a_i 的 Persona per_i、意見 o_i^{t=0}、記憶 m_i^{t=0}$
     [非必要] 輸入認知偏見、封閉世界限制
-    初始化意見軌跡 <o_i> = {o_i^{t=0}}
+    初始化意見軌跡 $<o_i> = {o_i^{t=0}}$
 
-for t = 1 to T:
-    隨機選擇一對不同的 Agents {a_i, a_j}（i ≠ j）
-    Agent a_i  寫貼文 x_i^t
-    Agent a_j  回報文字意見 r_{j,t}
-    利用 f_oc 評級：o_j = f_oc(r_j^t)，新增至 <o_j>
+- for t = 1 to T:
+    隨機選擇一對不同的 Agents ${a_i, a_j}（i ≠ j$
+    Agent $a_i  寫貼文 x_i^t$
+    Agent $a_j  回報文字意見 r_{j,t}$
+    利用 $f_oc 評級：o_j = f_oc(r_j^t)，新增至 <o_j>$
     更新記憶：
-        m_i^{t+1} = f_mu("write",  x_i^t, NULL,   m_i^t)
-        m_j^{t+1} = f_mu("review", x_i^t, r_j^t,  m_j^t)
+        $m_i^{t+1} = f_mu("write",  x_i^t, NULL,   m_i^t)$
+        $m_j^{t+1} = f_mu("review", x_i^t, r_j^t,  m_j^t)$
 
-return 每位 Agent a_i 的意見軌跡 <o_i>
-```
+return 每位 Agent $a_i 的意見軌跡 <o_i>$
