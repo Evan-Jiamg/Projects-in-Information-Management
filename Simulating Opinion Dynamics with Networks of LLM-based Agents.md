@@ -129,9 +129,9 @@ Answer with a single opinion value within the options -2, -1, 0, 1, 2.
 
 ---
 
-## 參、Old vs. New Method (其餘內容)
+## 參、Old vs. New (Paper) Method
 
-| | 傳統 ABM | 本 Paper 提出 |
+| | 傳統 ABM | Paper 提出 |
 |---|---|---|
 | **輸入/輸出** | 數值 | 自然語言 |
 | **理念更新** | 數學方程式 | Transformer-based LLM |
