@@ -134,8 +134,7 @@ Answer with a single opinion value within the options -2, -1, 0, 1, 2.
 | | 傳統 ABM | Paper 提出 |
 |---|---|---|
 | **輸入/輸出** | 數值 | 自然語言 |
-| **理念更新** | 數學方程式 | Transformer-based LLM |
-| **性質** | 過於簡化人類行為 | 透過個體 Persona 設定 |
+| **理念更新** | 數學方程式 (過於簡化人類行為) | Transformer-based LLM |
 
 > **提出方法**: 以 **LLM 母體** 為基礎，模擬意見動態
 
