@@ -197,13 +197,12 @@ LLM Agents 對於「產生準確資訊」具有**強烈的固有偏見**：
 
 ## 柒、演算法：利用 LLM Agents 模擬意見動態
 
-```
-Input:
+- Input:
   N 個 Agents 的 Personas {per_i}_{i=1}^N
   Time Steps T
   Opinion Classifier f_oc
 
-Output:
+- Output:
   每位 Agent a_i 的意見軌跡 <o_i>
 
 ---
