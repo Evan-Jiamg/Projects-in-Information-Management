@@ -15,9 +15,9 @@
 
 ---
 
-## 貳、Opinion Classifier（主軸重點 Core）
+## 貳、Opinion Classifier（Core）
 
-> 核心關注：確認**文字如何轉成數值**。
+> Core：確認**文字如何轉成數值**。
 
 ### 一、模型選擇
 
