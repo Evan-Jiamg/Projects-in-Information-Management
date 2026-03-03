@@ -4,18 +4,17 @@
 
 ## 壹、總結
 
-本框架的核心貢獻：
+- 核心想法：
 
-> 將 Coevolutionary Opinion Formation Games 中，原本基於**一維數值差**的 K-NN 選鄰法，替換成根據 **SBERT 語意向量的 Cosine Distance**，在更高維度的語意向量空間中，實作 K-NN，並驗證 Game Theory 的 PoA 數學界限，在此設定下是否成立。
+將 Coevolutionary Opinion Formation Games 中，原本基於**一維數值差**的 K-NN 選鄰法，替換成根據 **SBERT 語意向量的 Cosine Distance**，在更高維度的語意向量空間中，實作 K-NN，並驗證 Game Theory 的 PoA 數學界限，在此設定下是否成立。
 
 ---
 ## 貳、假設（待驗證）
 
 | 假設 | 說明 |
 |---|---|
-| Cosine Distance 滿足距離函數要求 | Coevolutionary 模型要求 $f, g$ 具備 convex、symmetric 特性，Cosine Distance 的 convexity 需確認 |
-| SBERT 向量能代表 Intrinsic Opinion | 以初始貼文向量作為 $s_i^0$ 是否穩定代表 Agent 的固有立場 |
-| Equilibrium 閾值 $\delta$ 的選定 | $\delta$ 的設定影響 Equilibrium 判斷，需做敏感度分析 |
+| SBERT 向量能代表 Intrinsic Opinion | 以初始貼文向量作為 $s_i^0$ 是否真能代表 Agent 真實立場，初始貼文裡表達，搞不好不是真正的內在想法 |
+| Equilibrium 閾值 $\delta$ 的選定 | $\delta$ 設定會影響 Equilibrium 判斷，若 $\delta$ 變化時，PoA 幾乎不變，結果會更可信 |
 
 ---
 
@@ -100,7 +99,7 @@ $$\max_i |o_i^{t+\Delta t} - o_i^t| < \delta$$
 
 #### Step 3：定義 Optimal Outcome
 
-跑多組不同初始條件的模擬，取總 Social Cost 最低的結果作為 $C(\text{opt})$：
+跑多組不同初始條件 (比如：不同初始 Persona / 貼文內容) 模擬，取 Total Social Cost 最低的結果作為 $C(\text{opt})$：
 
 $$C(\text{opt}) = \min_{\text{runs}} \sum_i C_i$$
 
