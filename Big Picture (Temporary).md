@@ -97,7 +97,7 @@ $$d(a, b) = \|\text{SBERT}(a) - \text{SBERT}(b)\|_2$$
 
 #### Step 2：定義 Equilibrium
 
-比較 Agent i 這個 Time Step 的貼文向量，跟上一個 Time Step 的貼文向量之間的距離，如果所有 Agent 的向量都不再顯著移動，視為 Equilibrium。
+當所有 Agent 的貼文向量，從這個 Time Step 到下一個 Time Step 的移動距離都小於 δ 時，代表不管繼續互動，Agent 的語意立場都不再改變，視為達到 Equilibrium。
 
 $$\max_i \|\text{SBERT}(y_i^t) - \text{SBERT}(y_i^{t-\Delta t})\|_2 < \delta$$
 
