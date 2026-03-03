@@ -47,7 +47,7 @@ $$N(i) = \{ K \text{ agents with smallest } |z_j - s_i| \}$$
 
 $$N(i) = \{ K \text{ agents with smallest } \|\text{SBERT}(z_j^t) - \text{SBERT}(s_i^0)\|_2 \}$$
 
-$$ Supplement: \|a - b\|_2 = \sqrt{\sum_k (a_k - b_k)^2}$$
+$$Euclidean Distance: \|a - b\|_2 = \sqrt{\sum_k (a_k - b_k)^2}$$
 
 **對應關係：**
 
