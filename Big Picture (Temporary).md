@@ -41,9 +41,11 @@ Agent 的 Textual Opinion（貼文 y(t)）
 
 $$N(i) = \{ K \text{ agents with smallest } |z_j - s_i| \}$$
 
-- 將 Coevolutionary 框架的核心替換，把一維數值的距離，改成向量空間 Cosine Distance：
+- 將 Coevolutionary 框架的核心替換，把一維數值的距離，改成向量空間 Euclidean Distance
 
-$$N(i) = \left\{ K \text{ agents with smallest } 1 - \cos\!\left(\text{SBERT}(z_j^t),\ \text{SBERT}(s_i^0)\right) \right\}$$
+  (同樣滿足 Coevolutionary 模型對 Convex + Symmetric 要求)：
+
+$$N(i) = \left\{ K \text{ agents with smallest } \left\|\text{SBERT}(z_j^t) - \text{SBERT}(s_i^0)\right\|_2 \right\}$$
 
 **對應關係：**
 
@@ -51,7 +53,7 @@ $$N(i) = \left\{ K \text{ agents with smallest } 1 - \cos\!\left(\text{SBERT}(z_
 |---|---|
 | $s_i$（Intrinsic Opinion） | Agent $i$ **初始貼文**的 SBERT 向量（固定不變） |
 | $z_j$（Expressed Opinion） | Agent $j$ 在時間 $t$ 的**當前貼文**的 SBERT 向量（隨模擬更新） |
-| $\|z_j - s_i\|$（數值差） | $1 - \cos(\text{SBERT}(z_j^t), \text{SBERT}(s_i^0))$（Cosine Distance） |
+| $\|z_j - s_i\|$（數值差） | $1 - \cos(\text{SBERT}(z_j^t), \text{SBERT}(s_i^0))$（Euclidean Distance） |
 
 ---
 
@@ -77,7 +79,7 @@ $$f(O_j, O_i(t)) = \text{LLM}(T_o(C_i, C_j))$$
 
 - 模擬完成後，目標是驗證結果是否符合 Coevolutionary 論文給出的 PoA 理論界限
 
-- 沿用 Coevolutionary 非對稱模型，將數值差替換為 Cosine Distance：
+- 沿用 Coevolutionary 非對稱模型，將數值差替換為 Euclidean Distance：
 
 $$C_i = \sum_{j \in N(i)} d(z_i^t, z_j^t)^2 + \rho K \cdot d(z_i^t, s_i^0)^2$$
 
