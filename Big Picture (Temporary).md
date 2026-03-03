@@ -45,7 +45,9 @@ $$N(i) = \{ K \text{ agents with smallest } |z_j - s_i| \}$$
 
   (同樣滿足 Coevolutionary 模型對 Convex + Symmetric 要求)：
 
-$$N(i) = \left\{ K \text{ agents with smallest } \left\|\text{SBERT}(z_j^t) - \text{SBERT}(s_i^0)\right\|_2 \right\}$$
+$$N(i) = \{ K \text{ agents with smallest } \|\text{SBERT}(z_j^t) - \text{SBERT}(s_i^0)\|_2 \}$$
+
+$$ Supplement: \|a - b\|_2 = \sqrt{\sum_k (a_k - b_k)^2}$$
 
 **對應關係：**
 
