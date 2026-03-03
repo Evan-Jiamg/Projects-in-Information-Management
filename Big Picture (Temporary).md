@@ -91,13 +91,11 @@ $$d(a, b) = \|\text{SBERT}(a) - \text{SBERT}(b)\|_2$$
 
 - 第一項：Agent $i$ 與鄰居的 Expressed Opinion 差異成本
 - 第二項：Agent $i$ 的 Expressed vs. Intrinsic Opinion 差異成本
-- $\rho$：自身意見的權重（$\rho$ 大 → Narrow-minded；$\rho$ 小 → Broad-minded）
+- $\rho：自身意見的權重（\rho 大 → Narrow-minded；\rho$ 小 → Broad-minded）
 
 #### Step 2：定義 Equilibrium
 
-當所有 Agent 的意見 Opinion Classifier 的數值，在連續數個 Time Steps 內，不再顯著變化時，作為達到 Equilibrium。
-
-當所有 Agent 的輸出數值，在連續 $\Delta t$ 個 Time Steps 內的變化量小於閾值 $\delta$，視為達到 Equilibrium：
+當所有 Agent 的意見 Opinion Classifier 的數值，在連續 $\Delta t$ 個 Time Steps 內，變化量小於閾值 $\delta$ 時，作為達到 Equilibrium。
 
 $$\max_i |o_i^{t+\Delta t} - o_i^t| < \delta$$
 
