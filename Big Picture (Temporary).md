@@ -6,7 +6,7 @@
 
 - 核心想法：
 
-將 Coevolutionary Opinion Formation Games 中，原本基於**一維數值差**的 K-NN 選鄰法，替換成根據 **SBERT 語意向量的 Cosine Distance**，在更高維度的語意向量空間中，實作 K-NN，並驗證 Game Theory 的 PoA 數學界限，在此設定下是否成立。
+將 Coevolutionary Opinion Formation Games 中，原本基於**一維數值差**的 K-NN 選鄰法，替換成根據 **SBERT 語意向量的 Euclidean Distance**，在更高維度的語意向量空間中，實作 K-NN，並驗證 Game Theory 的 PoA 數學界限，在此設定下是否成立。
 
 ---
 ## 貳、假設（待驗證）
@@ -47,7 +47,7 @@ $$N(i) = \{ K \text{ agents with smallest } |z_j - s_i| \}$$
 
 $$N(i) = \{ K \text{ agents with smallest } \|\text{SBERT}(z_j^t) - \text{SBERT}(s_i^0)\|_2 \}$$
 
-$$Euclidean Distance: \|a - b\|_2 = \sqrt{\sum_k (a_k - b_k)^2}$$
+$$\text{Euclidean Distance: } \|a - b\|_2 = \sqrt{\sum_k (a_k - b_k)^2}$$
 
 **對應關係：**
 
@@ -55,7 +55,7 @@ $$Euclidean Distance: \|a - b\|_2 = \sqrt{\sum_k (a_k - b_k)^2}$$
 |---|---|
 | $s_i$（Intrinsic Opinion） | Agent $i$ **初始貼文**的 SBERT 向量（固定不變） |
 | $z_j$（Expressed Opinion） | Agent $j$ 在時間 $t$ 的**當前貼文**的 SBERT 向量（隨模擬更新） |
-| $\|z_j - s_i\|$（數值差） | $1 - \cos(\text{SBERT}(z_j^t), \text{SBERT}(s_i^0))$（Euclidean Distance） |
+| $\|z_j - s_i\|$（數值差） | $\|\text{SBERT}(z_j^t) - \text{SBERT}(s_i^0)\|_2$（Euclidean Distance） |
 
 ---
 
@@ -87,7 +87,7 @@ $$C_i = \sum_{j \in N(i)} d(z_i^t, z_j^t)^2 + \rho K \cdot d(z_i^t, s_i^0)^2$$
 
 其中：
 
-$$d(a, b) = 1 - \cos\!\left(\text{SBERT}(a),\ \text{SBERT}(b)\right)$$
+$$d(a, b) = \|\text{SBERT}(a) - \text{SBERT}(b)\|_2$$
 
 - 第一項：Agent $i$ 與鄰居的 Expressed Opinion 差異成本
 - 第二項：Agent $i$ 的 Expressed vs. Intrinsic Opinion 差異成本
@@ -97,7 +97,7 @@ $$d(a, b) = 1 - \cos\!\left(\text{SBERT}(a),\ \text{SBERT}(b)\right)$$
 
 當所有 Agent 的意見 Opinion Classifier 的數值，在連續數個 Time Steps 內，不再顯著變化時，作為達到 Equilibrium。
 
-當所有 Agent 的 輸出數值，在連續 $\Delta t$ 個 Time Steps 內的變化量小於閾值 $\delta$，視為達到 Equilibrium：
+當所有 Agent 的輸出數值，在連續 $\Delta t$ 個 Time Steps 內的變化量小於閾值 $\delta$，視為達到 Equilibrium：
 
 $$\max_i |o_i^{t+\Delta t} - o_i^t| < \delta$$
 
