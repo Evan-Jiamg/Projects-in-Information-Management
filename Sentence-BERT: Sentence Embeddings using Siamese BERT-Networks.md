@@ -101,7 +101,7 @@ Paper 採用 **Spearman 相關性 $\rho$**（而非 Pearson），因為 Pearson 
 
 > BERT 直接輸出的向量效果甚至比 GloVe embeddings 還差，說明 BERT 的向量空間並不適合直接用 cosine similarity 比較。
 
-### 4.3 論點相似度 (AFS) 評估
+### 三、論點相似度 (AFS) 評估
 
 - AFS 語料庫：從社群媒體標註 6000 個論點句子對，涵蓋 **槍枝管制**、**同性婚姻**、**死刑**三個主題
 
