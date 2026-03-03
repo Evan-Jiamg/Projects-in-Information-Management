@@ -77,7 +77,7 @@ $$\min \max(\|s_a - s_p\| - \|s_a - s_n\| + \varepsilon, \ 0)$$
 
 $$距離度量：**Euclidean Distance**$$
 
-$$邊際 \varepsilon = 1，確保 s_p 比 s_n 至少更靠近 s_a 達 \varepsilon$$
+$$邊際 \varepsilon = 1，確保 s_p 比 s_n 至少更靠近 s_a 且距離至少為 \varepsilon$$
 
 ---
 
