@@ -6,7 +6,7 @@
 
 - 核心想法：
 
-將 Coevolutionary Opinion Formation Games 中，原本基於**一維數值差**的 K-NN 選鄰法，替換成根據 **SBERT 語意向量的 Euclidean Distance**，在更高維度的語意向量空間中，實作 K-NN，並驗證 Game Theory 的 PoA 數學界限，在此設定下是否成立。
+將 Coevolutionary Opinion Formation Games 中，原本根據**一維數值差**的 K-NN 選鄰法，替換成根據 **SBERT 語意向量的 Euclidean Distance**，在更高維度的語意向量空間中，實作 K-NN，並驗證 Game Theory 的 PoA 數學界限，在此設定下是否成立。
 
 ---
 ## 貳、假設（待驗證）
