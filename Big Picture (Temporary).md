@@ -26,10 +26,8 @@
 
 ```
 Agent 的 Textual Opinion（貼文 y(t)）
-        ├──→ Opinion Classifier f_oc (FLAN-T5-XXL)
-        │         → Numeric Rating o ∈ {-2,-1,0,1,2}
+        ├──→ Echo Chamber 意見更新算法
         │         → 用於【意見更新層】
-        │
         └──→ SBERT
                   → 固定維度語意向量
                   → 用於【K-NN 選鄰層】
@@ -65,6 +63,10 @@ $$\text{Euclidean Distance: } \|a - b\|_2 = \sqrt{\sum_k (a_k - b_k)^2}$$
 
 $$O_i(t+1) = O_i(t) + \frac{1}{|N_i(t)|} \sum_{j \in N_i(t)} f(O_j, O_i(t))$$
 
+- $O_i(t)$：個體 $i$ 在時間 $t$ 所持有的意見
+- $N_i(t)$：在有向圖中，指向個體 $i$ 的鄰居集合
+- $f(O_j, O_i(t))$：影響函數，表示個體 $i$ 的鄰居 $j$ 對個體 $i$ 意見的影響
+
 其中影響函數由 LLM 驅動：
 
 $$f(O_j, O_i(t)) = \text{LLM}(T_o(C_i, C_j))$$
@@ -95,9 +97,9 @@ $$d(a, b) = \|\text{SBERT}(a) - \text{SBERT}(b)\|_2$$
 
 #### Step 2：定義 Equilibrium
 
-當所有 Agent 的意見 Opinion Classifier 的數值，在連續 $\Delta t$ 個 Time Steps 內，變化量小於閾值 $\delta$ 時，作為達到 Equilibrium。
+比較 Agent i 這個 Time Step 的貼文向量，跟上一個 Time Step 的貼文向量之間的距離，如果所有 Agent 的向量都不再顯著移動，視為 Equilibrium。
 
-$$\max_i |o_i^{t+\Delta t} - o_i^t| < \delta$$
+$$\max_i \|\text{SBERT}(y_i^t) - \text{SBERT}(y_i^{t-\Delta t})\|_2 < \delta$$
 
 #### Step 3：定義 Optimal Outcome
 
