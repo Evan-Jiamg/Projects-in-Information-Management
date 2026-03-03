@@ -11,7 +11,7 @@
 
 ## 貳、Pooling 策略：從 BERT 輸出產生句子向量
 
-- SBERT 在 BERT / RoBERTa 的輸出層後，增加一個 **Pooling Operation**，將輸出轉為固定大小的句子嵌入。
+- SBERT 在 BERT / RoBERTa 的輸出層後，增加一個 **Pooling Operation**，將輸出轉為固定大小向量的句子嵌入。
 
 - 共有 3 種策略：
 
