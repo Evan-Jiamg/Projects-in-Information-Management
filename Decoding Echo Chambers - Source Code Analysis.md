@@ -6,13 +6,15 @@
 
 ## Contents
 
-1. [Main Process](#1-main-process)
-2. [Recommendation Algorithm](#2-recommendation-algorithm)
-3. [Opinion Update Algorithm](#3-opinion-update-algorithm)
-4. [Network Construction](#4-network-construction)
-5. [Experimental Results — LLM Simulation](#5-experimental-results--llm-simulation)
-6. [Comparison — LLM vs. Traditional Numerical Methods](#6-comparison--llm-vs-traditional-numerical-methods)
-
+1. [Experimental Results — LLM Simulation](#1-experimental-results--llm-simulation)
+2. [Comparison — LLM vs. Traditional Numerical Methods (自行實作)](#2-comparison--llm-vs-traditional-numerical-methods-自行實作)
+3. [Visualization btw. LLM vs. Numeric](#3-visualization-btw-llm-vs-numeric)
+4. [Review - Main Process](#4-review---main-process)
+5. [Review - Recommendation Algorithm](#5-review---recommendation-algorithm)
+6. [Review - Opinion Update Algorithm](#6-review---opinion-update-algorithm)
+7. [Review - Network Construction](#7-review---network-construction)
+8. [Detailed Implementation of Numeric Method](#8-detailed-implementation-of-numeric-method)
+   
 ---
 
 ## 1. Experimental Results — LLM Simulation
