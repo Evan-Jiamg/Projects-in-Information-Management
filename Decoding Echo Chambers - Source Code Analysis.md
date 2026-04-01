@@ -73,8 +73,10 @@
 
 ## 2. Comparison — LLM vs. Traditional Numerical Methods (自行實作)
 
-BCM、FJ、DeGroot 為傳統意見動態模型，以相同的 Network Structure + Initial Belief，作為 Baseline，與 LLM 模擬結果對比。
+- Abstract Guideline：在同張 Network 裡，以不同比例 α ，控制 Type-C（Numeric，cost-minimizing） 和 Type-L（LLM-driven） 兩種 Agent 數量 ，每輪互動後，再用 k-NN Rewiring 更新鄰居，最終量化成 Social Cost 和 PoA。
 
+- My Progress：先做 Numeric (BCM、FJ、DeGroot) vs. LLM Model，分析在同張 Network 的表現。
+  
 ### Experimental Result
 
 #### BCM
