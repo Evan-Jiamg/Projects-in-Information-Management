@@ -409,7 +409,8 @@ elif network_type == "random":
 
 - LLM 的 Belief Value 範圍為 `[-2, 2]`（`model.py:83` 將 Opinion Value `[-1, 1]`× 2 放大，使 GPT 能明確感知數值強度）。
 - Numeric Method 直接沿用原始 Opinion Value，範圍 `[-1, 1]`，Initial Belief Value 從 JSON 載入，只有五個固定值：`-1.0, -0.5, 0.0, 0.5, 1.0`。
-- `stubbornness` 沿用原先 Scale-Free Network 中調整 Agent 對自身 Opinion 堅持程度的數值，此處作為 FJ 模型的加權參數。
+- stubbornness 直接沿用 `data/numeric_sim_opnions_and_stubbornness_num_agents_50.json`，該檔案為預先備好的靜態資料，記錄所有 50 個 Agent 各自的初始 Opinion（-1 ~ 1）與 Stubbornness（0 ~ 1）數值。其中，對應 LLM 實驗 Leader Nodes 的 Agent 10、30，其 stubbornness 設為 1（完全固執），其餘 Agent 則為隨機值（約 0.26 ~ 0.66），作為 FJ Method 所採用的 Stubbornness 係數。
+- Scale-Free Network 中調整 Agent 對自身 Opinion 堅持程度的數值，此處作為 FJ 模型的加權參數。
 - `epsilon` 為 BCM 的 Belief Value 相差允許的最大值，預設 `0.5`。
 
 ```python
